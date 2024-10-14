@@ -1,26 +1,40 @@
 import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
 
-        Scanner scannerok = new Scanner(System.in);
-        System.out.println("Введіть ваше число");
+public class Main{
+    public static void main(String[] args) {;
 
-        int Cif = scannerok.nextInt();
+    Scanner scanner = new Scanner(System.in);
 
-        for (int i = 2; i <= Cif; i++) {
-            boolean isPrime = true;
+//Завдання - 1
 
-            for (int j = 2; j <= Math.sqrt(i); j++) {
-                if (i % j == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
+    System.out.println("Введіть перше число");
+    Integer intValue = scanner.nextInt();
 
-            // Якщо число просте, виводимо його
-            if (isPrime) {
-                System.out.println(i);
-            }
-        }
+    scanner.nextLine();
+
+    System.out.println("Введіть друге число");
+    Integer intCifra = scanner.nextInt();
+
+    scanner.nextLine();
+
+    System.out.println("Введіть математичну дію");
+    String string = scanner.nextLine();
+    switch(string) {
+        case "/":
+            System.out.println(intValue + string + intCifra + "=" + intValue/intCifra);
+            break;
+        case "*":
+            System.out.println(intValue + string + intCifra + "=" + intValue*intCifra);
+            break;
+        case "-":
+            System.out.println(intValue + string + intCifra + "=" + (intValue-intCifra));
+            break;
+        case "+":
+            System.out.println(intValue + string + intCifra + "=" + (intValue+intCifra));
+            break;
+
+//Завдання 2
+
+    }
     }
 }
