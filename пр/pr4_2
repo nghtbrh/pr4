@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scannerok = new Scanner(System.in);
+
+        System.out.print("Перше число: ");
+        int cifra = scannerok.nextInt();
+
+        System.out.print("Друге число: ");
+        int cifra2 = scannerok.nextInt();
+
+        while (cifra != cifra2) {
+            if (cifra > cifra2) {
+                cifra = cifra - cifra2;
+            } else {
+                cifra2 = cifra2 - cifra;
+            }
+        }
+
+        System.out.println("НСД: " + cifra);
+        scannerok.close();
+    }
+}
